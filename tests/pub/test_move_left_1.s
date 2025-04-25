@@ -13,7 +13,7 @@ buf:
 	
 	.text
 .import "../../src/place.s"
-.import "../../src/buffer.s"
+.import "../../src/move_left.s"
 .import "../../src/check_victory.s"
 .import "../../src/printboard.s"
 
