@@ -9,7 +9,7 @@ message_content:
 .asciiz "Board Content: "
 
 error_message:
-.asciiz "\Assertion failed: Board was modified!"
+.asciiz "\nAssertion failed: Board was modified!"
 
 .text
 
@@ -42,7 +42,7 @@ success:
 	jr ra
 
 exit_board_modified:
-    la a0 error_message
+    la a1 error_message
 	li a0 4
 	ecall 
     li a0 10
