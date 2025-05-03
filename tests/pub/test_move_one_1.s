@@ -5,7 +5,7 @@ message:
 	.asciiz "move_one returned: "
 
 board:
-	.half 0,0,2,0
+	.half 2,0,0,0
 	.half 0,0,0,0
 	.half 0,0,0,0
 	.half 0,0,0,0
@@ -17,6 +17,7 @@ buf:
 	.text
 .import "../../src/place.s"
 .import "../../src/buffer.s"
+.import "../../src/move_one.s"
 .import "../../src/check_victory.s"
 .import "../../src/printboard.s"
 

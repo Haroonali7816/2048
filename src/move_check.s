@@ -8,7 +8,7 @@
 #            else 0
 #
 move_check:
-addi t0 x0 1
+addi t0 x0 1 # we start by the second tile since we want to check if we can move left
 slli t1 t0 2 # shift t0 to left by 2
 add t2 a0 t1
 loop:
@@ -26,7 +26,7 @@ loop:
  blt t0 a1 loop # continue loop until t0 (current index) is less than total elements in the array
 
 # If the loop is over then we move here to no move possible.
-j not_move
+
 
 not_move:
 li a0 0
