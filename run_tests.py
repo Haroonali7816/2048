@@ -25,20 +25,6 @@ MAX_INSTRUCTIONS = 50000000
 AE_CODE = 127
 SE_CODE = 126
 
-# SOURCES = [
-#     "src/util.s",
-#     "src/check_victory.s",
-#     "src/buffer.s",
-#     "src/merge.s",
-#     "src/move_check.s",
-#     "src/move_left.s",
-#     "src/complete_move.s",
-#     "src/move_one.s",
-#     "src/place.s",
-#     "src/printboard.s",
-#     "src/points.s",
-#     "tests/test_utils.s"]
-
 RULE = 60 * "="
 
 

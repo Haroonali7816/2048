@@ -14,7 +14,7 @@ buf:
 	.text
 
 .import "../../src/place.s"
-.import "../../src/buffer.s"
+.import "../../src/complete_move.s"
 .import "../../src/check_victory.s"
 .import "../../src/printboard.s"
 
