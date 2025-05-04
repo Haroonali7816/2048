@@ -22,6 +22,9 @@ merge:
  mv s1 a1
 
  li t0 0
+ li a6 0
+ li a5 0
+
 
  loop:
  addi t2 s1 -1
@@ -48,11 +51,15 @@ merge:
  sh a4 0(t3)
  sh x0 0(t4)
 
+addi a6 a6 1
+add a5 a5 a4
  leave:
  addi t0 t0 1
  j loop
 
  done:
+ mv a0 a6
+ mv a1 a5
  lw s1 4(sp)
  lw s0 8(sp)
  lw ra 12(sp)
