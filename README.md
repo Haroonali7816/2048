@@ -1,70 +1,71 @@
-2048 in RISC-V Assembly
+2048 — RISC-V Assembly Implementation
 
-This project implements the full logic of the classic game 2048 in RISC-V assembly, including tile movement, merging, scoring, board rendering, and game-state evaluation. The program runs on the Venus RISC-V simulator and follows a modular, subroutine-based structure.
+This repository contains an implementation of the 2048 puzzle game written fully in RISC-V assembly. The project focuses on building all core mechanics from scratch: tile shifting, merging, random tile generation, board representation, scoring, and a simple text-based display.
 
-✨ Features
+Overview
 
-Full tile-movement system (shift, compress, merge)
+The program represents the game board as a linear array in memory and performs all operations using low-level memory access and modular subroutines. Movement is handled by shifting and merging tiles to the left, while rotations allow the same logic to be reused for all four directions. The game supports scoring, victory detection, and checking whether further moves are possible.
 
-Deterministic row operations for all directions via rotation logic
+Features
 
-Scoring with merge value accumulation and combo multipliers
+4×4 board stored as an array of unsigned halfwords
 
-Victory and move-availability checks
+Tile shifting and merging logic
 
 Random tile placement (2 or 4)
 
-Text-based board renderer formatted for a 4×4 grid
+Detection of win/loss states
 
-Clean separation of logic into modular assembly subroutines
+Scoring with combined merge values and combo multiplier
 
-🧠 Technical Overview
+Text-based board renderer with aligned tile formatting
 
-The board is stored as a 1D array of unsigned halfwords in row-major order.
+Modular RISC-V routines for each operation
 
-Rows/columns are passed to subroutines as arrays of memory addresses.
+How it Works
 
-Movement consists of:
+Board Representation: A 1D array in row-major order. A tile value of 0 represents an empty cell.
 
-Shifting tiles left
+Movement Logic:
 
-Merging equal adjacent tiles
+Compress tiles to the left
 
-Shifting again to remove gaps
+Merge equal adjacent tiles
 
-Scoring is computed from merged tile values, combined with a combo multiplier.
+Compress again to remove gaps
 
-Rendering prints each tile in a fixed-width cell, aligned using spaces.
+Scoring: The value of each merged tile contributes to the score; multiple merges apply a combo multiplier.
 
-▶ Running the Project
-Run tests
+Rendering: The board is printed with fixed-width cells to create a clear grid.
+
+Running and Testing
+Run all public tests
 ./run_tests.py
 
-Run in Venus
+Run in the simulator
 
-Open the assembly file in VSCode and start the Venus debugger to step through execution, inspect registers, and view memory.
+Open the .s files in VSCode and start the Venus RISC-V debugger to inspect registers, memory, and execution flow.
 
-📂 Structure
-src/
-  main.s
-  utils.s
-  printboard.s
-  move_left.s
-  merge.s
-  move_one.s
-  complete_move.s
-  check_victory.s
-  move_check.s
-  place.s
+Project Structure
+main.s
+utils.s
+printboard.s
+move_left.s
+merge.s
+move_one.s
+complete_move.s
+check_victory.s
+move_check.s
+place.s
 tests/
 run_tests.py
 
-🛠 Tools Used
+Tools Used
 
 RISC-V (RV32I)
 
-Venus Simulator
+Venus simulator
 
-Python test harness
+Python testing framework
 
-Git / VSCode
+Git + VSCode
