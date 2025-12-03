@@ -41,7 +41,7 @@ Rendering: The board is printed with fixed-width cells to create a clear grid.
 **Running and Testing**
 
 Run all public tests
-./run_tests.py
+```./run_tests.py```
 
 **Run in the simulator**
 
@@ -49,18 +49,18 @@ Open the .s files in VSCode and start the Venus RISC-V debugger to inspect regis
 
 **Project Structure**
 
-main.s
-utils.s
-printboard.s
-move_left.s
-merge.s
-move_one.s
-complete_move.s
-check_victory.s
-move_check.s
-place.s
-tests/
-run_tests.py
+```main.s```
+```utils.s```
+```printboard.s```
+```move_left.s```
+```merge.s```
+```move_one.s```
+```complete_move.s```
+```check_victory.s```
+```move_check.s```
+```place.s```
+```tests/```
+```run_tests.py```
 
 **Tools Used**
 
