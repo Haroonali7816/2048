@@ -1,12 +1,12 @@
-2048 — RISC-V Assembly Implementation
+**2048 — RISC-V Assembly Implementation**
 
-This repository contains an implementation of the 2048 puzzle game written fully in RISC-V assembly. The project focuses on building all core mechanics from scratch: tile shifting, merging, random tile generation, board representation, scoring, and a simple text-based display.
+   This repository contains an implementation of the 2048 puzzle game written fully in RISC-V assembly. The project focuses on building all core mechanics from scratch: tile    shifting, merging, random tile generation, board representation, scoring, and a simple text-based display.
 
-Overview
+**Overview**
 
-The program represents the game board as a linear array in memory and performs all operations using low-level memory access and modular subroutines. Movement is handled by shifting and merging tiles to the left, while rotations allow the same logic to be reused for all four directions. The game supports scoring, victory detection, and checking whether further moves are possible.
+  The program represents the game board as a linear array in memory and performs all operations using low-level memory access and modular subroutines. Movement is handled by   shifting and merging tiles to the left, while rotations allow the same logic to be reused for all four directions. The game supports scoring, victory detection, and          checking whether further moves are possible.
 
-Features
+**Features**
 
 4×4 board stored as an array of unsigned halfwords
 
@@ -22,7 +22,7 @@ Text-based board renderer with aligned tile formatting
 
 Modular RISC-V routines for each operation
 
-How it Works
+**Working**
 
 Board Representation: A 1D array in row-major order. A tile value of 0 represents an empty cell.
 
@@ -38,15 +38,17 @@ Scoring: The value of each merged tile contributes to the score; multiple merges
 
 Rendering: The board is printed with fixed-width cells to create a clear grid.
 
-Running and Testing
+**Running and Testing**
+
 Run all public tests
 ./run_tests.py
 
-Run in the simulator
+**Run in the simulator**
 
 Open the .s files in VSCode and start the Venus RISC-V debugger to inspect registers, memory, and execution flow.
 
-Project Structure
+**Project Structure**
+
 main.s
 utils.s
 printboard.s
@@ -60,7 +62,7 @@ place.s
 tests/
 run_tests.py
 
-Tools Used
+**Tools Used**
 
 RISC-V (RV32I)
 
